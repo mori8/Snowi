@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/navstartbutton"
+        android:layout_width="379dp"
+        android:layout_height="223dp"
+        android:text="Start navigate"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <Button
+        android:id="@+id/devicesetbutton"
+        android:layout_width="188dp"
+        android:layout_height="95dp"
+        android:text="activate/inactivate devices"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <Button
+        android:id="@+id/deviceaddbutton"
+        android:layout_width="188dp"
+        android:layout_height="95dp"
+        android:text="add/delete devices"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <Button
+        android:id="@+id/settingbutton"
+        android:layout_width="188dp"
+        android:layout_height="95dp"
+        android:text="settings"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <Button
+        android:id="@+id/myinfobutton"
+        android:layout_width="188dp"
+        android:layout_height="95dp"
+        android:text="My information"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
