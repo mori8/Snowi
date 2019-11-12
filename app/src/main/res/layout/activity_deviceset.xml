@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".devicesetActivity">
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="356dp"
+        android:layout_height="62dp"
+        android:text="device 1"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="356dp"
+        android:layout_height="62dp"
+        android:text="device 2"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="적용"
+        tools:layout_editor_absoluteX="291dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="93dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
