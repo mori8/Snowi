@@ -11,8 +11,8 @@
         android:layout_width="379dp"
         android:layout_height="223dp"
         android:text="Start navigate"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="159dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="148dp" />
 
     <Button
         android:id="@+id/devicesetbutton"
