@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.estimote.sdk.BeaconManager;
-import com.estimote.sdk.SystemRequirementsChecker;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
