@@ -8,38 +8,41 @@
 
     <Button
         android:id="@+id/navstartbutton"
-        android:layout_width="379dp"
-        android:layout_height="223dp"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="57dp"
         android:text="Start navigate"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="148dp" />
+        app:layout_constraintBottom_toTopOf="@+id/devicesetbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="321dp"
-        android:layout_weight="2"/>
+    <Button
+        android:id="@+id/devicesetbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="activate/inactivate devices"
+        app:layout_constraintBottom_toTopOf="@+id/settingbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navstartbutton" />
 
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"/>
-        <Button
-            android:id="@+id/devicesetbutton"
-            android:layout_width="379dp"
-            android:layout_height="95dp"
-            android:text="activate/inactivate devices"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="428dp" />
+    <Button
+        android:id="@+id/settingbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="113dp"
+        android:text="settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/devicesetbutton" />
 
-        <Button
-            android:id="@+id/settingbutton"
-            android:layout_width="379dp"
-            android:layout_height="95dp"
-            android:text="settings"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="523dp" />
-    <LinearLayout/>
-
-    <LinearLayout/>
 </androidx.constraintlayout.widget.ConstraintLayout>
