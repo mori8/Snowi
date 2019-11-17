@@ -14,36 +14,32 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="148dp" />
 
-    <Button
-        android:id="@+id/devicesetbutton"
-        android:layout_width="188dp"
-        android:layout_height="95dp"
-        android:text="activate/inactivate devices"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="428dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="321dp"
+        android:layout_weight="2"/>
 
-    <Button
-        android:id="@+id/deviceaddbutton"
-        android:layout_width="188dp"
-        android:layout_height="95dp"
-        android:text="add/delete devices"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="523dp" />
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"/>
+        <Button
+            android:id="@+id/devicesetbutton"
+            android:layout_width="379dp"
+            android:layout_height="95dp"
+            android:text="activate/inactivate devices"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="428dp" />
 
-    <Button
-        android:id="@+id/settingbutton"
-        android:layout_width="188dp"
-        android:layout_height="95dp"
-        android:text="settings"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="523dp" />
+        <Button
+            android:id="@+id/settingbutton"
+            android:layout_width="379dp"
+            android:layout_height="95dp"
+            android:text="settings"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="523dp" />
+    <LinearLayout/>
 
-    <Button
-        android:id="@+id/myinfobutton"
-        android:layout_width="188dp"
-        android:layout_height="95dp"
-        android:text="My information"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="428dp" />
-
+    <LinearLayout/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,26 +24,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button device_set_button = (Button) findViewById(R.id.deviceaddbutton);
-        device_set_button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), deviceaddActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button myinfo_button = (Button) findViewById(R.id.myinfobutton);
-        myinfo_button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), myinfoActivity.class);
-                startActivity(intent);
-            }
-        });
-
         Button settings_button = (Button) findViewById(R.id.settingbutton);
         settings_button.setOnClickListener(new View.OnClickListener(){
 
@@ -64,5 +44,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
