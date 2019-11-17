@@ -7,9 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-//import com.estimote.sdk.BeaconManager;
-//import com.estimote.sdk.SystemRequirementsChecker;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,26 +20,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), navigateActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button device_set_button = (Button) findViewById(R.id.deviceaddbutton);
-        device_set_button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), deviceaddActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button myinfo_button = (Button) findViewById(R.id.myinfobutton);
-        myinfo_button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), myinfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,5 +44,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
