@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button settings_button = (Button) findViewById(R.id.settingbutton);
+        Button settings_button = (Button) findViewById(R.id.deviceaddbutton);
         settings_button.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), settingsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), deviceaddActivity.class);
                 startActivity(intent);
             }
         });

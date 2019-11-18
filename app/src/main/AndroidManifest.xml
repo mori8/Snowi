@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".deviceaddActivity"></activity>
-        <activity android:name=".settingsActivity" />
         <activity android:name=".devicesetActivity" />
         <activity android:name=".navigateActivity" />
         <activity android:name=".MainActivity">
