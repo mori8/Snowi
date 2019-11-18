@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button device_active_button = (Button) findViewById(R.id.devicesetbutton);
-        settings_button.setOnClickListener(new View.OnClickListener(){
+        device_active_button.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), settingsActivity.class);
+                Intent intent = new Intent(getApplicationContext(), devicesetActivity.class);
                 startActivity(intent);
             }
         });
