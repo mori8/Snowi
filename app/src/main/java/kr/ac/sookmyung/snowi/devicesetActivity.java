@@ -2,35 +2,35 @@ package kr.ac.sookmyung.snowi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+//import androidx.recyclerview.widget.LinearLayoutManager;
+//import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class devicesetActivity extends AppCompatActivity {
 
-    private RecyclerAdapter adapter;
+//    private RecyclerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deviceset);
 
-        init();
+        // init();
 
         // getData();
     }
 
-    private void init() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        adapter = new RecyclerAdapter();
-        recyclerView.setAdapter(adapter);
-    }
+//    private void init() {
+//        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+//
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//
+//        adapter = new RecyclerAdapter();
+//        recyclerView.setAdapter(adapter);
+//    }
 
 //    private void getData() {
         // 임의의 데이터입니다.
