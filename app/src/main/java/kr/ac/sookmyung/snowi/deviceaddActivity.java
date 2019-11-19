@@ -19,11 +19,29 @@ public class deviceaddActivity extends AppCompatActivity implements View.OnClick
         //button1 = (Button)findViewById(R.id.button1);
         //devname = (TextView)findViewById(R.id.devname);
         //sort = (TextView)findViewById(R.id.sort);
+
+        //button1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()){
+            //case R.id.button1:
+                deviceaddActivity dialog = new deviceaddActivity(this);
+                dialog.setDialogListener(new device.CustomDialogListener() {
+                    @Override
+                    public void onPositiveClicked(String devname, String sort) {
+                        devname.setText(devname);
+                        sort.setText(sort);
+                    }
 
+                    @Override
+                    public void onNegativeClicked() {
+
+                    }
+                });
+                dialog.showDialog();//이거 코드와 다른게
+                break;
+        }
     }
 }
-
