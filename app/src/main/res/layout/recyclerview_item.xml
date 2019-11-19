@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/b_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
@@ -26,17 +26,27 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/b_uuid_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:text="방향과 거리"
             android:textColor="@android:color/darker_gray"
             android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/b_place_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="설치 장소"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+
     </LinearLayout>
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/b_onoff_swi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
