@@ -12,7 +12,6 @@
         <activity android:name=".deviceaddActivity" />
         <activity android:name=".devicesetActivity" />
         <activity android:name=".navigateActivity" />
-        <activity android:name=".settingsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
