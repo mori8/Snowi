@@ -21,7 +21,6 @@ public class devicesetActivity extends AppCompatActivity {
 
         init();
 
-        // getData();
     }
 
     private void init() {
