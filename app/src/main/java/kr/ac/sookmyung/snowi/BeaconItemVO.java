@@ -5,16 +5,35 @@ import android.widget.Switch;
 
 public class BeaconItemVO {
     private String b_name_str;
+    private String b_rssi_str;
     private String b_uuid_str;
     private String b_place_str;
     private Boolean b_onoff_bln;
     private Switch b_onoff_swi;
 
-    public BeaconItemVO(String b_name_str, String b_uuid_str, String b_place_str, Boolean b_onoff_bln) {
+    public BeaconItemVO(String b_name_str, String b_rssi_str, String b_uuid_str, String b_place_str, Boolean b_onoff_bln) {
         this.b_name_str = b_name_str;
+        this.b_rssi_str = b_rssi_str;
         this.b_uuid_str = b_uuid_str;
         this.b_place_str = b_place_str;
         this.b_onoff_bln = b_onoff_bln;
+    }
+
+    public BeaconItemVO(String b_rssi_str){
+        this.b_rssi_str = b_rssi_str;
+    }
+
+    public String getB_rssi_str() {
+        return b_rssi_str;
+    }
+
+    public BeaconItemVO setBB_rssi(String rssi){
+        this.b_rssi_str = rssi;
+        return this;
+    }
+
+    public void setB_rssi_str(String b_rssi_str) {
+        this.b_rssi_str = b_rssi_str;
     }
 
     public String getB_name_str() {
