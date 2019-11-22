@@ -1,5 +1,7 @@
 package kr.ac.sookmyung.snowi;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -12,14 +14,6 @@ public abstract class BeaconItemsHolder extends RecyclerView.ViewHolder {
     public BeaconItemsHolder(@NonNull View itemView) {
 
         super(itemView);
-
-        //아이템 클릭 이벤트 처리
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //click event
-            }
-        });
     }
 
     protected abstract void clear();

@@ -9,9 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import kr.ac.sookmyung.snowi.DB.DBConnect;
+
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSIONS = 100;
     private Intent serviceIntent;
+
+    DBConnect dbConnect = new DBConnect();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -8,7 +8,7 @@
     android:padding="10dp">
 
     <TextView
-        android:text="기기 이름"
+        android:text="장애물 설명"
         android:textStyle="bold"
         android:textSize="15dp"
         android:id="@+id/devname"
@@ -18,7 +18,7 @@
     </TextView>
 
     <EditText
-        android:id="@+id/image"
+        android:id="@+id/editdevname"
         android:layout_width="250dip"
         android:layout_height="40dip"
         android:layout_marginRight="10dp" />
@@ -35,7 +35,7 @@
     </TextView>
 
     <EditText
-        android:id="@+id/text"
+        android:id="@+id/editsort"
         android:layout_width="250dip"
         android:layout_height="40dip"
         android:textColor="#FFF" />

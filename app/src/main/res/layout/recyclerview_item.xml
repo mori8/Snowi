@@ -9,10 +9,9 @@
     android:background="@android:color/white">
 
     <LinearLayout
-        android:layout_width="11dp"
-        android:layout_height="47dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
         <TextView
@@ -52,16 +51,15 @@
             android:text="설치 장소"
             android:textColor="@android:color/darker_gray"
             android:textSize="13sp" />
-
     </LinearLayout>
 
     <Switch
         android:id="@+id/b_onoff_swi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
         android:text=""
         android:textSize="18sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
 </LinearLayout>

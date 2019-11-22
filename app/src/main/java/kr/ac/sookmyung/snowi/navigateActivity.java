@@ -93,7 +93,7 @@ public class navigateActivity extends AppCompatActivity implements BeaconConsume
 
                 // 비콘의 아이디와 거리를 측정하여 textView에 넣는다.
                 for(Beacon beacon : beaconList){
-                    obstacleTextView.append("ID : " + beacon.getId2());
+                    obstacleTextView.append("ID : " + beacon.getId2()  );
                     distanceTextView.append("Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m\n");
                 }
 
