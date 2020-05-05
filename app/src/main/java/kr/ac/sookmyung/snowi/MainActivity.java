@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                         Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS);
 
-        Button nav_button = (Button) findViewById(R.id.navstartbutton);
+        Button nav_button = (Button) findViewById(R.id.navigate_btn);
         nav_button.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -36,22 +36,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button settings_button = (Button) findViewById(R.id.deviceaddbutton);
+        Button settings_button = (Button) findViewById(R.id.adding_btn);
         settings_button.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), deviceaddActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button device_set_button = (Button) findViewById(R.id.devicesetbutton);
-        device_set_button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), devicesetActivity.class);
                 startActivity(intent);
             }
         });

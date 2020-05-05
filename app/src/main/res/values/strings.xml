@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Snowi</string>
+    <string name="app_name">스노아이</string>
+    <string name="not_resi_name_beacon">등록되지 않은 비콘</string>
+    <string name="beacon_in_title">Snow*i 등록/수정</string>
 </resources>

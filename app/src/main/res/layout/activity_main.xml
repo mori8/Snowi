@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/navstartbutton"
-        android:layout_width="0dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="57dp"
-        android:text="Start navigate"
-        app:layout_constraintBottom_toTopOf="@+id/devicesetbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/include_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/devicesetbutton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:text="activate/inactivate devices"
-        app:layout_constraintBottom_toTopOf="@+id/deviceaddbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/navstartbutton" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="13dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="bottom">
 
-    <Button
-        android:id="@+id/deviceaddbutton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="113dp"
-        android:text="add devices"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/devicesetbutton" />
+        <Button
+            android:id="@+id/navigate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:paddingVertical="80dp"
+            android:drawableTop="@drawable/navigate_icon"
+            android:text="안내 시작"
+            android:textSize="30dp"
+            android:background="@color/yellow"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/adding_btn"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="50dp"
+            android:drawableTop="@drawable/add_icon"
+            android:text="장치 추가"
+            android:textSize="30dp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

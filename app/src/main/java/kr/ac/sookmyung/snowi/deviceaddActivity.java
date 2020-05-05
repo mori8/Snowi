@@ -17,11 +17,8 @@ import org.altbeacon.beacon.BeaconParser;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class deviceaddActivity extends AppCompatActivity implements BeaconConsumer {
@@ -56,10 +53,7 @@ public class deviceaddActivity extends AppCompatActivity implements BeaconConsum
         r_layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(r_layoutManager);
 
-        //
-
-
-       // beaconArrayList.add(new BeaconItemVO("test1","sdf","test : uuid", "test_place",true));
+        beaconArrayList.add(new BeaconItemVO("test","test","test", true));
 
         handler.sendEmptyMessage(0);
 
@@ -99,29 +93,23 @@ public class deviceaddActivity extends AppCompatActivity implements BeaconConsum
     Handler handler = new Handler() {
         public void handleMessage(Message msg) {
 
-
             for(Beacon beacon : beaconList){
-                //Log.i("GET_BEACON","ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m "+beacon.getDistance()+"\n");
-                if(beacon != null){
-                    if((position = Collections.binarySearch(arrBeaconSave, beacon.getBluetoothAddress())) == -1){
-                        Log.i("GET_BEACON"+position,"ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m "+beacon.getDistance()+"\n");
-                        //비콘이 새로 추가 되었을 떄
-                        beaconArrayList.add(new BeaconItemVO("TestBeacon",Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m ","UUID" + beacon.getId2().toString(), "test_place",true));
+                if(beacon != null) {
+                    if ((position = arrBeaconSave.indexOf(beacon.getBluetoothAddress())) == -1) {
+                        Log.i("GET_BEACON3", "beacon add : " + beacon.getBluetoothAddress() + "ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m " + beacon.getDistance() + "\n");
+                        beaconArrayList.add(new BeaconItemVO("등록되지 않은 비콘", String.format("%.3f", beacon.getDistance()), beacon.getId1().toString(),  true));
                         arrBeaconSave.add(beacon.getBluetoothAddress());
-                    }else {
-                        Log.i("GET_BEACON3","ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m "+beacon.getDistance()+"\n");
+                    } else { Log.i("GET_BEACON3", "beacon add : " + beacon.getBluetoothAddress() + "ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m " + beacon.getDistance() + "\n");
                         //이미 검색 비콘 일 때
-                        beaconArrayList.set(position, beaconArrayList.get(position).setBB_rssi(String.format("%.3f", beacon.getDistance())));
-
+                        beaconArrayList.set(position, beaconArrayList.get(position).setBB_distance(String.format("%.3f", beacon.getDistance())));
                     }
-
-                    //Log.i("GET_REAL_BEACON","ID : " + beacon.getId2() + " / " + "Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m "+beacon.getDistance()+"\n");
                 }
             }
+            //Log.i("BEACON LIST SIZE", beaconList.size()+"");
 
             beaconAdapter.notifyDataSetChanged();
 
-            handler.sendEmptyMessageDelayed(0, 1000);
+            handler.sendEmptyMessageDelayed(0, 1200);
         }
     };
 }

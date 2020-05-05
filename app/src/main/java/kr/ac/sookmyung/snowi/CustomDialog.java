@@ -14,6 +14,7 @@ public class CustomDialog extends Dialog implements View.OnClickListener{
     private Button negativeButton;
     private EditText editdevname;//??
     private EditText editsort;//??불확실
+    private EditText editplace;
     private Context context;
 
     private CustomDialogListener customDialogListener;
@@ -26,7 +27,7 @@ public class CustomDialog extends Dialog implements View.OnClickListener{
 
     //인터페이스 설정
     interface CustomDialogListener{
-        void onPositiveClicked(String devname, String sort);
+        void onPositiveClicked(String devname, String sort, String place);
         void onNegativeClicked();
     }
 
@@ -65,9 +66,10 @@ public class CustomDialog extends Dialog implements View.OnClickListener{
                 //각각의 변수에 EidtText에서 가져온 값을 저장
                 String devname = editdevname.getText().toString();
                 String sort = editsort.getText().toString();
+                String place = editplace.getText().toString();
 
                 //인터페이스의 함수를 호출하여 변수에 저장된 값들을 Activity로 전달
-                //ustomDialogListener.onPositiveClicked(); ??onpositive~에 지정한 변수가 name, address, X(3개 지정 변수)
+                customDialogListener.onPositiveClicked(devname, sort, place); //onpositive~에 지정한 변수가 name, address, X(3개 지정 변수)
                 dismiss();
                 break;
             case R.id.negativeButton: //취소 버튼을 눌렀을 때

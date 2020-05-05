@@ -7,6 +7,7 @@ import android.os.Message;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -25,28 +26,33 @@ import java.util.List;
 public class navigateActivity extends AppCompatActivity implements BeaconConsumer {
 
     private BeaconManager beaconManager;
+
     // 감지된 비콘들을 임시로 담을 리스트
     private List<Beacon> beaconList = new ArrayList<>();
-    TextView obstacleTextView;
+    ArrayList<BeaconItemVO> beaconArrayList = new ArrayList<>();
+    BeaconListAdapter beaconAdapter;
+
     TextView distanceTextView;
+    TextView nameTextView;
+    Button voiceBtn;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_navigate);
 
-            // 실제로 비콘을 탐지하기 위한 비콘매니저 객체를 초기화
-            //obstacle -> 장애물 종류, distance -> 장애물과의 거리
-            beaconManager = BeaconManager.getInstanceForApplication(this);
-            obstacleTextView = (TextView)findViewById(R.id.nav_sort);
-            distanceTextView = (TextView)findViewById(R.id.nav_length);
+            distanceTextView = (TextView)findViewById(R.id.n_distance_tv);
+            nameTextView = (TextView)findViewById(R.id.n_name_tv);
+            voiceBtn = (Button)findViewById(R.id.voice_btn);
 
-            // 여기가 중요한데, 기기에 따라서 setBeaconLayout 안의 내용을 바꿔줘야 하는듯 싶다.
-            // 필자의 경우에는 아래처럼 하니 잘 동작했음.
+            //beacon setting
+            beaconManager = BeaconManager.getInstanceForApplication(this);
             beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
 
-            // 비콘 탐지를 시작한다. 실제로는 서비스를 시작하는것.
-            beaconManager.bind(this);
+           beaconArrayList.add(new BeaconItemVO("장식용 화분","0.55","c96d936a-f87b-4573-afb3-38ab68ab3e91",true));
+            //beacon start
+            //beaconManager.bind(this);
+           // handler.sendEmptyMessage(0);
         }
 
         @Override
@@ -79,23 +85,25 @@ public class navigateActivity extends AppCompatActivity implements BeaconConsume
             }
         }
 
-        // 버튼이 클릭되면 textView 에 비콘들의 정보를 뿌린다.
-        public void OnButtonClicked(View view){
-            // 아래에 있는 handleMessage를 부르는 함수. 맨 처음에는 0초간격이지만 한번 호출되고 나면
-            // 1초마다 불러온다.
-            handler.sendEmptyMessage(0);
-        }
 
         Handler handler = new Handler() {
             public void handleMessage(Message msg) {
-                obstacleTextView.setText("");
                 distanceTextView.setText("");
+                nameTextView.setText("");
+
+                for(Beacon beacon : beaconList){
+                    if(beacon != null) {
+                       // BeaconItemVO minBeacon = beaconAdapter.getMinBeacon(beaconArrayList);
+
+                        distanceTextView.append(String.format(String.format("%.3f", beacon.getDistance())));
+                        //nameTextView.append(minBeacon.getB_name_str());
+                        voiceBtn.setText("0.55 미터 전방에 장식용 화분이가 위치합니다.조심하세요");
+                    }
+                }
 
                 // 비콘의 아이디와 거리를 측정하여 textView에 넣는다.
-                for(Beacon beacon : beaconList){
-                    obstacleTextView.append("ID : " + beacon.getId2()  );
-                    distanceTextView.append("Distance : " + Double.parseDouble(String.format("%.3f", beacon.getDistance())) + "m\n");
-                }
+
+
 
                 // 자기 자신을 1초마다 호출
                 handler.sendEmptyMessageDelayed(0, 1000);

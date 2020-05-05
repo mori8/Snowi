@@ -3,63 +3,92 @@
     android:id="@+id/layout_root"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:layout_width="wrap_content"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:padding="20dp">
 
     <TextView
-        android:text="장애물 설명"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        android:id="@+id/devname"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="5dp"
+        android:textColor="@color/black"
+        android:text="@string/beacon_in_title"/>
+
+    <TextView
+        android:text="장애물 이름"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:id="@+id/devname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
     </TextView>
 
     <EditText
         android:id="@+id/editdevname"
-        android:layout_width="250dip"
-        android:layout_height="40dip"
-        android:layout_marginRight="10dp" />
+        android:layout_width="match_parent"
+        android:layout_height="40dip" />
 
     <TextView
-        android:text="유형"
-        android:id="@+id/sort"
+        android:text="설명"
         android:textStyle="bold"
-        android:textSize="15dp"
-        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
+        android:layout_margin="5dp">
 
     </TextView>
 
     <EditText
         android:id="@+id/editsort"
-        android:layout_width="250dip"
-        android:layout_height="40dip"
-        android:textColor="#FFF" />
+        android:layout_width="match_parent"
+        android:layout_height="40dip" />
 
-    <LinearLayout
+    <TextView
+        android:text="설치 장소(간략히)"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:layout_margin="5dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/editplace"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:weightSum="2"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/positiveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:text="연결" />
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:background="@color/cancel_btn"
+            android:text="취소" />
 
         <Button
             android:id="@+id/negativeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
-        android:text="취소" />
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:background="@color/yellow"
+            android:text="저장" />
     </LinearLayout>
 </LinearLayout>
